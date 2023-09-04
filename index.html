@@ -71,15 +71,48 @@
         <button>View all works</button>
       </article>
       <div class="img">
-        <img class="img-large" src="./assets/img/ohrring.png" alt="Ohrring" />
-        <img class="img-small" src="./assets/img/frau.png" alt="" />
+        <div class="ohrring">
+          <img class="img-large" src="./assets/img/ohrring.png" alt="Ohrring" />
+          <div class="overlay">
+            <img src="./assets/img/18.png" alt="" />
+            <p>DEVELOPMENT</p>
+            <h3>
+              Stefanie <br />
+              Brückler
+            </h3>
+          </div>
+        </div>
+
+        <div class="frau">
+          <img class="img-small" src="./assets/img/frau.png" alt="" />
+          <div class="overlay">
+            <img src="./assets/img/18.png" alt="" />
+            <p>CREATIVE</p>
+            <h3>
+              Shelby <br />
+              Hypol
+            </h3>
+          </div>
+        </div>
       </div>
+
       <div class="img">
-        <img
-          class="img-small"
-          src="./assets/img/section3frau.png"
-          alt="Orange"
-        />
+        <div class="orange">
+          <img
+            class="img-small"
+            src="./assets/img/section3frau.png"
+            alt="Orange"
+          />
+          <div class="overlay">
+            <img src="./assets/img/18.png" alt="" />
+            <p>CREATIVE</p>
+            <h3>
+              Shelby <br />
+              Hypol
+            </h3>
+          </div>
+        </div>
+
         <img class="img-large" src="./assets/img/section3.png" alt="" />
       </div>
     </section>
@@ -92,18 +125,22 @@
       </div>
 
       <article>
-        <img src="./assets/img/2.jpg.png" alt="" />
+        <div class="img-left"></div>
         <div>
           <h2>Costume</h2>
           <p>Cloth & Wearing</p>
-          <h2>Acting</h2>
-          <p>Character</p>
-          <h2>Modelling</h2>
+          <div>
+            <h2 class="h2-2">Acting</h2>
+            <p>Character</p>
+            <img class="img-left" src="./assets/img/20.jpeg" alt="" />
+            <img class="img-right" src="./assets/img/13.jpeg" alt="" />
+          </div>
+          <h2 class="h2-3">Modelling</h2>
           <p>Fashion & Life Style</p>
-          <h2>Artist</h2>
+          <h2 class="h2-4">Artist</h2>
           <p>Creative Designer</p>
         </div>
-        <img src="./assets/img/div.service-right-image.png" alt="" />
+        <div class="img-right"></div>
       </article>
     </section>
 
@@ -174,6 +211,31 @@
 
     <footer>
       <img src="./assets/img/63f7265d0f0e7e7ded90b066_sdf.png.png" alt="Logo" />
+
+      <div>
+        <p>Main Page</p>
+        <p>Licensing</p>
+        <p>Style Guide</p>
+        <p>404 Page</p>
+      </div>
+
+      <div>
+        <p>Works</p>
+        <p>Changelog</p>
+        <p>About</p>
+        <p>Services</p>
+      </div>
+
+      <div>
+        <p>Fb Tw In Db Be</p>
+        <div class="line"></div>
+        <p>Powerd by <span>Webflow</span></p>
+      </div>
+
+      <div>
+        <input type="email" placeholder="Your Email" />
+        <input type="submit" value="Submit" />
+      </div>
     </footer>
   </body>
 </html>
