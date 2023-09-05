@@ -1,0 +1,150 @@
+/* !!! Media Querries */
+
+/* Breakpoints */
+/* Smartphone ab 576px */
+/* Tablet an 768px */
+/* Desktop ab 992px */
+
+@media only screen and (max-width: 576px) {
+  h2 {
+    font-size: 5rem;
+  }
+
+  header nav {
+    height: 20px;
+  }
+
+  header nav a {
+    display: none;
+  }
+
+  .section1 {
+    margin: 25% auto 0 auto;
+    width: 100%;
+    padding: 0 auto;
+  }
+
+  .section1 h1 {
+    font-size: 8rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section1 article {
+    display: none;
+  }
+
+  .section1 article:nth-of-type(2) {
+    display: block;
+    width: 100%;
+  }
+
+  .section2 p {
+    margin: 0 auto 20px auto;
+    width: 100%;
+  }
+
+  .section3 article .line {
+    width: 0px;
+  }
+
+  .section3 article {
+    flex-direction: column;
+  }
+
+  .section3 article p {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    width: 100%;
+  }
+
+  .section3 .img {
+    flex-direction: column;
+  }
+
+  .section3 img {
+    width: 100%;
+  }
+
+  .section3 img:nth-of-type(7) {
+    margin-top: 50px;
+  }
+
+  .section4 article .img-left,
+  .img-right {
+    display: none;
+  }
+
+  .section5 article {
+    flex-direction: column;
+  }
+
+  .section5 article .line {
+    width: 0px;
+  }
+
+  .section5 article:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section5 article:nth-of-type(2) h4 {
+    margin-bottom: 20px;
+  }
+
+  .section6 {
+    height: 30vh;
+  }
+  .section6 div {
+    width: 100%;
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .section6 div h2 {
+    font-size: 3rem;
+    text-indent: 0px;
+    text-align: left;
+  }
+
+  .section6 div p {
+    font-size: 1.7rem;
+    text-indent: 0px;
+    margin: 20px 0 0 30%;
+  }
+
+  .section7 article {
+    flex-direction: column;
+  }
+
+  .section7 h2 {
+    font-size: 5rem;
+  }
+
+  .section7 article p {
+    width: 100%;
+    margin-bottom: 30px;
+    text-indent: 0px;
+  }
+
+  .section7 article img {
+    width: 50%;
+  }
+
+  .section8 {
+    margin: 0;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer img {
+    width: 20%;
+  }
+
+  footer div {
+    margin: 50px auto 0 auto;
+  }
+}

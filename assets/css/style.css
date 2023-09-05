@@ -68,7 +68,7 @@ header nav {
   top: 0;
   padding: 30px 50px 25px 50px;
   border-bottom: 1px solid #333337;
-  z-index: 1;
+  z-index: 10;
 }
 
 header nav a {
@@ -88,9 +88,10 @@ header nav a:hover {
 .section1 {
   height: 120vh;
   width: 70%;
-  position: relative;
   background-image: url("../img/19.png");
-  margin-bottom: 25vh;
+  margin: 15vh auto 25vh auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section1 .videobutton {
@@ -102,7 +103,7 @@ header nav a:hover {
   padding: 35px 35px 35px 40px;
   color: #e8bf96;
   text-align: center;
-  margin: 200px auto 12px auto;
+  margin: 0 auto 12px auto;
 }
 
 .section1 h1 {
@@ -110,8 +111,7 @@ header nav a:hover {
   font-size: 15rem;
   color: white;
   text-align: center;
-  width: 50%;
-  margin: 0 auto 40px auto;
+  z-index: 3;
 }
 
 .section1 h4 {
@@ -126,61 +126,66 @@ header nav a:hover {
   color: #e8bf96;
 }
 
-.section1 img {
-  position: absolute;
+.section1 article:nth-of-type(1) {
+  width: 25%;
+  position: relative;
 }
 
-/* Bilder */
-.section1 img:nth-of-type(1) {
-  left: 0;
-  top: 30%;
+.section1 article:nth-of-type(1) img {
+  margin: 50px 0 10% 0;
 }
 
-.section1 img:nth-of-type(2) {
-  left: 40%;
-  bottom: 0;
-}
-
-.section1 img:nth-of-type(3) {
-  right: 0;
-  top: 10%;
-}
-
-.section1 img:nth-of-type(4) {
-  left: 37%;
-  top: 68%;
-}
-
-.section1 div img:nth-of-type(1) {
-  left: 8%;
-  top: 82%;
-}
-
-.section1 div img:nth-of-type(2) {
-  left: 0%;
-  top: 82%;
-}
-
-/* Texte */
-.section1 p:nth-of-type(2) {
-  position: absolute;
-  width: 17%;
-  right: 5%;
-  bottom: 10%;
-  line-height: 28px;
-}
-
-.section1 p span {
+.section1 article:nth-of-type(1) p {
   color: white;
+  font-size: 2.2rem;
+  text-align: left;
+  margin-left: 30%;
+  margin-top: 40%;
+}
+
+.section1 article:nth-of-type(1) div img:first-of-type {
+  position: absolute;
+  left: 30%;
+  top: 52%;
+}
+
+.section1 article:nth-of-type(1) div img:last-of-type {
+  position: absolute;
+  top: 55%;
+}
+
+.section1 article:nth-of-type(2) {
+  width: 40%;
+  position: relative;
+}
+
+.section1 article:nth-of-type(2) img:first-of-type {
+  margin: 30% 0 10% 30%;
+}
+
+.section1 article:nth-of-type(2) img:last-of-type {
+  position: absolute;
+  left: 20%;
+  top: 60%;
+}
+
+.section1 article:nth-of-type(3) {
+  width: 35%;
+}
+
+.section1 article:nth-of-type(3) img {
+  margin: 50px 0 20vh 20px;
+}
+
+.section1 article:nth-of-type(3) p {
+  margin-left: 20%;
+  text-align: left;
+  width: 50%;
+}
+
+.section1 article:nth-of-type(3) p span {
   font-size: 1.7rem;
-}
-
-.section1 div p {
-  position: absolute;
   color: white;
-  font-size: 2.3rem;
-  bottom: 10%;
-  left: 8%;
 }
 
 /* * section2 */
@@ -232,14 +237,6 @@ header nav a:hover {
   gap: 20%;
   margin-bottom: 15%;
 }
-.section3 .img-large {
-  width: 100%;
-}
-
-.section3 .img-small {
-  width: 100%;
-  margin-top: 23%;
-}
 
 .ohrring {
   position: relative;
@@ -272,6 +269,7 @@ header nav a:hover {
 
 .frau {
   position: relative;
+  margin-top: 20%;
 }
 
 .frau p {
@@ -289,7 +287,7 @@ header nav a:hover {
 
 .frau .overlay {
   position: absolute;
-  top: 13vh;
+  top: 8vh;
   left: 30px;
   color: white;
   display: none;
@@ -300,8 +298,65 @@ header nav a:hover {
 }
 
 .orange {
-  width: 150%;
+  position: relative;
+  margin-top: 20%;
 }
+
+.orange p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.orange h3 {
+  font-family: newyork;
+  font-size: 6rem;
+}
+
+.orange .overlay {
+  position: absolute;
+  top: 8vh;
+  left: 30px;
+  color: white;
+  display: none;
+}
+
+.orange:hover .overlay {
+  display: block;
+}
+
+.black {
+  position: relative;
+  width: 100%;
+}
+
+.black p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.black h3 {
+  font-family: newyork;
+  font-size: 6rem;
+}
+
+.black .overlay {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: white;
+  display: none;
+}
+
+.black:hover .overlay {
+  display: block;
+}
+
 /* * section4 */
 .section4 {
   margin-bottom: 15vh;
@@ -345,19 +400,11 @@ p {
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-.img-left {
-  width: 25%;
-  height: 60%;
   background-image: url("../img/2.jpg.png");
   background-repeat: no-repeat;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
-.img-right {
+.section4 .img-right {
   width: 15%;
   height: 40%;
   background-image: url("../img/div.service-right-image.png");
@@ -370,13 +417,25 @@ p {
 /* ? HOVER */
 .section4 div h2:hover {
   color: #e8bf96;
+  transition: 0.5s;
 }
 
-.section4 h2:hover .img-left {
+.section4 h2:hover + .img-left-2 {
   display: block;
+  position: absolute;
+  height: 60%;
+  width: 25%;
+  left: 0;
+  bottom: 0;
 }
 
-/* ?????????? */
+.img-left-2 {
+  display: none;
+}
+
+.img-right-2 {
+  display: none;
+}
 
 /* *section 5 */
 
@@ -547,20 +606,49 @@ footer p {
   margin-bottom: 8px;
 }
 
+footer div p span {
+  color: #999999;
+  font-size: 1.7rem;
+}
+
+footer div .line {
+  border-top: 1px solid #999999;
+  width: 100%;
+  margin: 20px 0;
+}
+
 footer div {
   margin: 80px 10% 90px auto;
   display: flex;
   flex-direction: column;
 }
 
-footer input {
+footer input:first-of-type {
+  width: 250%;
+  height: 50px;
   border: none;
+  background-color: #272422;
   border-bottom: 1px solid #333337;
-  padding-bottom: 10px;
+  margin-bottom: 20%;
 }
+
 footer input::placeholder {
   background-color: #272422;
   color: #999999;
   font-size: 1.3rem;
   padding-bottom: 0px;
+}
+
+footer input:last-of-type {
+  border: 1px solid #333337;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 30px 30px;
+  background-color: #272422;
+  transition: 0.5s;
+}
+
+footer input:last-of-type:hover {
+  background-color: rgba(255, 255, 255, 0.105);
 }
