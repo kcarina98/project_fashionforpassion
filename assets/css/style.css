@@ -25,8 +25,14 @@ section {
   margin: 0 auto;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4 {
   color: white;
+}
+
+h2 {
   font-size: 10rem;
   font-family: newyork;
 }
@@ -41,7 +47,8 @@ p {
   font-family: inter;
 }
 
-button {
+button,
+input:last-of-type {
   border: 1px solid #333337;
   border-radius: 50px;
   color: white;
@@ -51,8 +58,15 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
+button:hover,
+input:last-of-type:hover {
   background-color: rgba(255, 255, 255, 0.105);
+}
+
+.line {
+  border-top: 1px solid #999999;
+  width: 300px;
+  margin: 20px 0;
 }
 
 /* -header */
@@ -77,6 +91,7 @@ header nav a {
   font-family: inter;
   padding: 0 40px;
   font-size: 1.3rem;
+  transition: 0.5s;
 }
 
 header nav a:hover {
@@ -87,7 +102,6 @@ header nav a:hover {
 /* * section1 */
 .section1 {
   height: 120vh;
-  width: 70%;
   background-image: url("../img/19.png");
   margin: 15vh auto 25vh auto;
   display: flex;
@@ -109,13 +123,11 @@ header nav a:hover {
 .section1 h1 {
   font-family: newyork;
   font-size: 15rem;
-  color: white;
   text-align: center;
   z-index: 3;
 }
 
 .section1 h4 {
-  color: white;
   font-family: newyork;
   font-size: 3.5rem;
   text-align: center;
@@ -193,7 +205,6 @@ header nav a:hover {
   text-align: center;
 }
 .section2 h2 {
-  color: white;
   margin-bottom: 30px;
 }
 
@@ -218,120 +229,26 @@ header nav a:hover {
   margin-bottom: 60px;
 }
 
-.section3 .line {
-  width: 15%;
-  height: 20px;
-  border-top: 1px solid #999999;
-  margin-left: 5%;
-}
-
-.section3 p {
+.section3 article p {
   line-height: 23px;
   width: 35%;
   margin: 0 20% 0 10%;
   text-align: left;
 }
 
+/* Bilder */
 .section3 .img {
   display: flex;
   gap: 20%;
   margin-bottom: 15%;
 }
 
-.ohrring {
-  position: relative;
-}
-
-.ohrring p {
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-  margin-left: 0;
-  margin-top: 10px;
-}
-
-.ohrring h3 {
-  font-family: newyork;
-  font-size: 6rem;
-}
-
-.ohrring .overlay {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  color: white;
-  display: none;
-}
-
-.ohrring:hover .overlay {
-  display: block;
-}
-
-.frau {
-  position: relative;
-  margin-top: 20%;
-}
-
-.frau p {
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-  margin-left: 0;
-  margin-top: 10px;
-}
-
-.frau h3 {
-  font-family: newyork;
-  font-size: 6rem;
-}
-
-.frau .overlay {
-  position: absolute;
-  top: 8vh;
-  left: 30px;
-  color: white;
-  display: none;
-}
-
-.frau:hover .overlay {
-  display: block;
-}
-
-.orange {
-  position: relative;
-  margin-top: 20%;
-}
-
-.orange p {
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-  margin-left: 0;
-  margin-top: 10px;
-}
-
-.orange h3 {
-  font-family: newyork;
-  font-size: 6rem;
-}
-
-.orange .overlay {
-  position: absolute;
-  top: 8vh;
-  left: 30px;
-  color: white;
-  display: none;
-}
-
-.orange:hover .overlay {
-  display: block;
-}
-
+.ohrring,
 .black {
   position: relative;
-  width: 100%;
 }
 
+.ohrring p,
 .black p {
   font-size: 2rem;
   font-weight: 800;
@@ -340,20 +257,58 @@ header nav a:hover {
   margin-top: 10px;
 }
 
+.ohrring h3,
 .black h3 {
   font-family: newyork;
   font-size: 6rem;
 }
 
+.ohrring .overlay,
+.frau .overlay,
+.orange .overlay,
 .black .overlay {
   position: absolute;
-  top: 30px;
-  left: 30px;
   color: white;
   display: none;
 }
 
-.black:hover .overlay {
+.ohrring .overlay,
+.black .overlay {
+  top: 30px;
+  left: 30px;
+}
+
+.frau .overlay,
+.orange .overlay {
+  top: 5vh;
+  left: 30px;
+}
+
+.frau,
+.orange {
+  position: relative;
+  margin-top: 15%;
+}
+
+.frau p,
+.orange p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.frau h3,
+.orange h3 {
+  font-family: newyork;
+  font-size: 6rem;
+}
+
+.orange:hover .overlay,
+.black:hover .overlay,
+.ohrring:hover .overlay,
+.frau:hover .overlay {
   display: block;
 }
 
@@ -390,28 +345,29 @@ p {
   display: flex;
   position: relative;
 }
+
 .section4 article div {
   margin: 0 auto 60px auto;
 }
 
 .section4 .img-left {
   height: 60%;
-  width: 25%;
+  width: 30%;
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: url("../img/2.jpg.png");
-  background-repeat: no-repeat;
 }
 
 .section4 .img-right {
-  width: 15%;
+  width: 20%;
   height: 40%;
-  background-image: url("../img/div.service-right-image.png");
-  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.parent img {
+  display: none;
 }
 
 /* ? HOVER */
@@ -420,21 +376,8 @@ p {
   transition: 0.5s;
 }
 
-.section4 h2:hover + .img-left-2 {
+.parent:hover img {
   display: block;
-  position: absolute;
-  height: 60%;
-  width: 25%;
-  left: 0;
-  bottom: 0;
-}
-
-.img-left-2 {
-  display: none;
-}
-
-.img-right-2 {
-  display: none;
 }
 
 /* *section 5 */
@@ -446,13 +389,6 @@ p {
   display: flex;
   align-items: top;
   margin-bottom: 60px;
-}
-
-.section5 .line {
-  width: 20%;
-  height: 20px;
-  border-top: 1px solid #999999;
-  margin-left: 5%;
 }
 
 .section5 article:nth-of-type(1) p {
@@ -629,12 +565,6 @@ footer div p span {
   font-size: 1.7rem;
 }
 
-footer div .line {
-  border-top: 1px solid #999999;
-  width: 100%;
-  margin: 20px 0;
-}
-
 footer div {
   margin: 80px 10% 90px auto;
   display: flex;
@@ -655,18 +585,4 @@ footer input::placeholder {
   color: #999999;
   font-size: 1.3rem;
   padding-bottom: 0px;
-}
-
-footer input:last-of-type {
-  border: 1px solid #333337;
-  border-radius: 50px;
-  color: white;
-  font-size: 1.5rem;
-  padding: 30px 30px;
-  background-color: #272422;
-  transition: 0.5s;
-}
-
-footer input:last-of-type:hover {
-  background-color: rgba(255, 255, 255, 0.105);
 }
