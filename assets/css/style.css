@@ -489,6 +489,24 @@ p {
   object-fit: cover;
 }
 
+/* ?? BONUS */
+.section5 .zoom {
+  overflow: hidden;
+  height: 370px;
+  width: 370px;
+  margin-bottom: 20px;
+}
+
+.section5 img {
+  transition: transform 1s ease;
+  overflow: hidden;
+}
+
+.section5 article div img:hover {
+  transform: scale(1.2);
+}
+/* ?_________________________ */
+
 /* *section6 */
 .section6 {
   width: 100%;
